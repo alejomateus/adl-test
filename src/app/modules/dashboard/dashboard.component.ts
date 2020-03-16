@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuOptions } from '@menu/models/menu';
 import { ProductsService } from './services/products.service';
 import { Products, CountTypeAccount } from './models/products';
 
 @Component({
-  selector: 'dashboard',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
@@ -14,7 +13,7 @@ export class DashboardComponent implements OnInit {
   productstoShow: Array<Products>;
   productsFiltered: Array<Products>;
   counttypeAccount: CountTypeAccount;
-  productsAll: boolean = false;
+  productsAll = false;
   constructor(
     private productsServices: ProductsService,
   ) {
@@ -23,13 +22,12 @@ export class DashboardComponent implements OnInit {
       CURRENT_ACCOUNT: 0,
       CREDIT: 0,
       CREDIT_CARD: 0
-    }
+    };
   }
 
   ngOnInit(): void {
     this.productsServices.getProducts().subscribe((res: Array<Products>) => {
       this.products = res;
-      console.log(this.products);
       this.products.forEach(product => {
         switch (product.typeAccount) {
           case 'CERTIFIED_DEPOSIT_TERM':
@@ -55,15 +53,16 @@ export class DashboardComponent implements OnInit {
   }
   changeProducts(): void {
     this.productsAll = !this.productsAll;
-    if (this.productsAll)
+    if (this.productsAll) {
       this.productstoShow = this.products;
-    else
+    } else {
       this.productstoShow = this.productsFiltered;
+    }
     this.orderProducts();
     console.log(this.productsAll);
   }
   orderProducts(): void {
-    this.productstoShow.sort(function (a, b) {
+    this.productstoShow.sort((a, b) => {
       if (a.accountInformation.bank > b.accountInformation.bank) {
         return 1;
       }

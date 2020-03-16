@@ -14,8 +14,8 @@ describe('MenuService', () => {
       providers: [MenuService],
       imports: [HttpClientTestingModule]
     });
-    httpTestingController = TestBed.get(HttpTestingController);
-    service = TestBed.get(MenuService);
+    httpTestingController = TestBed.inject(HttpTestingController);
+    service = TestBed.inject(MenuService);
   });
 
   afterEach(() => {
@@ -28,14 +28,14 @@ describe('MenuService', () => {
   it('returned Observable should match the right data', () => {
     const mockMenuOptions = [
       {
-        "name": "TUS PRODUCTOS",
-        "type": "old",
-        "active": true
+        name: 'TUS PRODUCTOS',
+        type: 'old',
+        active: true
       },
       {
-        "name": "TU ORGANIZADOR",
-        "type": "new",
-        "active": false
+        name: 'TU ORGANIZADOR',
+        type: 'new',
+        active: false
       }
     ];
 

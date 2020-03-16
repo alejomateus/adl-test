@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './models/toolbar';
 
 @Component({
-  selector: 'toolbar',
+  selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
@@ -13,7 +13,7 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.userData = {
-      name: "Alejandro"
-    }
+      name: 'Alejandro'
+    };
   }
 }

@@ -1,3 +1,7 @@
+
+/**
+ * Model to Products
+ */
 export interface Products {
     accountInformation: AccountInformation;
     locked: boolean;

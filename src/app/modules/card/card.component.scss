@@ -1,36 +1,50 @@
-.card-footer {
-    padding: 0px !important;
-}
 .btn-primary {
-    width: 100%;
+  width: 100%;
 }
-.card-header {
+.card {
+  max-height: 300px;
+  height: 300px;
+  .card-header {
     display: inline-flex;
     padding-bottom: 0px;
     border: 0px;
     background-color: #fff;
-    .col-4{
-        padding-left: 0px;
+    .col-4 {
+      padding-left: 0px;
+      img {
+        height: 35px;
+      }
     }
-    .col-8{
-        padding-right: 0px;
+    .col-8 {
+      padding: 0px;
     }
+  }
+  .card-body {
+    font-size: 15px;
+    .card-title {
+      font-size: 12px;
+    }
+    .accountnumber {
+      font-size: 10px;
+    }
+  }
+  .card-footer {
+    padding: 0px !important;
+  }
 }
-.card-body{
-    font-size:15px;
-    .card-title{
-        font-size: 12px;
-    }
-    .accountnumber{
-        font-size: 10px;
-    }
+a {
+  font-size: 10px;
+  color: #007bff;
 }
-a{
-    font-size: 10px;
-}
-.col-6{
-    padding: 0;
+.col-6 {
+  padding: 0;
 }
 .right {
-    text-align: right;
+  text-align: right;
+}
+.bg-info {
+  background-color: gray !important;
+}
+.progress {
+  height: 5px !important;
 }

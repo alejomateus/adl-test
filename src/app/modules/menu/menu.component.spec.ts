@@ -38,9 +38,9 @@ describe('MenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it("should call getUsers and return list of users", async(() => {
+  it('should call getUsers and return list of users', async(() => {
     const response: MenuOptions[] = [];
-    spyOn(menuService, 'getMenu').and.returnValue(of(response))
+    spyOn(menuService, 'getMenu').and.returnValue(of(response));
     component.ngOnInit();
     fixture.detectChanges();
     expect(component.options).toEqual(response);

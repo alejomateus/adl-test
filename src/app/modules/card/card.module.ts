@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card.component';
 import { NgxMaskModule } from 'ngx-mask';
-import { ProducDetailComponent } from '@card/components/produc-detail/produc-detail.component';
+import { ProductDetailComponent } from '@app/modules/card/components/product-detail/product-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-    exports: [CardComponent, ProducDetailComponent],
-    declarations: [CardComponent, ProducDetailComponent],
+    exports: [CardComponent, ProductDetailComponent],
+    declarations: [CardComponent, ProductDetailComponent],
     imports: [
         CommonModule,
+        NgbModule,
         NgxMaskModule.forRoot()
     ],
     providers: [

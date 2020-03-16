@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Products } from '@dashboard/models/products';
-import { ProducDetailComponent } from './components/produc-detail/produc-detail.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +11,10 @@ import { ProducDetailComponent } from './components/produc-detail/produc-detail.
 export class CardComponent {
   @Input() product: Products;
   @Input() showBank: boolean;
+  closeResult: string;
+
   constructor(
+    private modalService: NgbModal
   ) {
 
   }
@@ -31,8 +35,9 @@ export class CardComponent {
     const percent = `${(totalSpent / total) * 100}%`;
     return percent;
   }
-  // showProductDetail(): void {
-
-  // }
+  showProductDetail(): void {
+    const modalRef = this.modalService.open(ProductDetailComponent);
+    modalRef.componentInstance.product = this.product;
+  }
 }
 

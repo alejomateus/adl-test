@@ -124,4 +124,9 @@ describe('CardComponent', () => {
     fixture.detectChanges();
     expect(component.product).toBeTruthy();
   }));
+  it('should validate showProductDetail', async(() => {
+    component.showProductDetail();
+    fixture.detectChanges();
+    expect(component.product).toBeTruthy();
+  }));
 });

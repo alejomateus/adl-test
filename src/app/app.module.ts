@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuModule } from '@menu/menu.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ToolbarModule } from '@toolbar/toolbar.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    MenuModule,
+    ToolbarModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

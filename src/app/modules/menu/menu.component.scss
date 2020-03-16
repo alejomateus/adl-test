@@ -1,0 +1,15 @@
+.menu {
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    .option {
+        border-bottom: 1px #d6d6d6 solid;
+        padding: 15px 0px;
+        .new {
+            font-size: 14px;
+        }
+        .bold{
+            font-weight: bold;
+        }
+    }
+}

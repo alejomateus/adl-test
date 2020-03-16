@@ -1,0 +1,56 @@
+// Alert Colors States
+$white-color: #fff;
+$alert-primary-color: #004085;
+$alert-secondary-color: #383d41;
+$alert-success-color: #155724;
+$alert-danger-color: #721c24;
+$alert-warning-color: #856404;
+$alert-info-color: #0c5460;
+
+// Alert BG Colors States
+
+$white-bg-color: #fff;
+$alert-primary-bg-color: #cce5ff;
+$alert-secondary-bg-color: #e2e3e5;
+$alert-success-bg-color: #d4edda;
+$alert-danger-bg-color: #f8d7da;
+$alert-warning-bg-color: #fff3cd;
+$alert-info-bg-color: #d1ecf1;
+
+    .badge.success {
+        background-color: rgba($alert-success-bg-color, 1);
+        color: $alert-success-color;
+    }
+    
+    .badge.warning {
+        background-color: rgba($alert-warning-bg-color, 1);
+        color: $alert-warning-color;
+    }
+    
+    .badge.danger {
+        background-color: rgba($alert-danger-bg-color, 1);
+        color: $alert-danger-color;
+    }
+    
+    .badge.info {
+        background-color: rgba($alert-info-bg-color, 1);
+        color: $alert-info-color;
+    }
+
+
+
+    .text.success {
+        color: $alert-success-color;
+    }
+    
+    .text.warning {
+        color: $alert-warning-color;
+    }
+    
+    .text.danger {
+        color: $alert-danger-color;
+    }
+    
+    .text.info {
+        color: $alert-info-color;
+    }

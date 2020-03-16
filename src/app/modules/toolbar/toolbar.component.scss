@@ -1,0 +1,39 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  padding: 15px 25px;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.alerts {
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+}
+.col-4 {
+  text-align: center;
+  padding: 0px;
+  span {
+    font-size: 10px;
+  }
+}
+.box_gretting{
+  margin-top:auto;
+}

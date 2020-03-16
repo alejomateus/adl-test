@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlRestAPI: "localhost:3000/"
 };

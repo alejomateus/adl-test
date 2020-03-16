@@ -1,0 +1,7 @@
+<div class="menu">
+    <div class="option" *ngFor="let option of options">
+        <span [ngClass]="option.active ? 'bold' : ''" >{{ option.name.toUpperCase() }}</span>
+        <br>
+        <span *ngIf="option.type === 'new'" class="new">¡Nuevo!</span>
+    </div>
+</div>

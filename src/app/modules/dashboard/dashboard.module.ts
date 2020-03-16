@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ToolbarModule } from '@toolbar/toolbar.module';
 import { CardModule } from '@card/card.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     ToolbarModule,
     CardModule,
+    NgbModule,
     RouterModule.forChild(routes)
   ]
 })

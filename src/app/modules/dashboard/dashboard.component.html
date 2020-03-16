@@ -4,28 +4,60 @@
       <span> Mostrar otros productos
       </span>
     </div>
-    <div class="box_gretting boxproducts" >
+    <div class="box_gretting boxproducts">
       <label class="switch">
-        <input type="checkbox" [checked]="productsAll" (click)="changeProducts()" >
+        <input type="checkbox" [checked]="productsAll" (click)="changeProducts()">
         <span class="slider round"></span>
       </label>
     </div>
   </div>
   <div class="col-12 finance">
     <div class="row">
-      <div class="col-6">
+      <div class="col-6 boxFinancesTitle">
         <span>¿Cómo se ven tus finanzas?</span>
       </div>
       <div class="col-6">
-
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/images/black_image.PNG" class="img-carousel">
+            </div>
+            <div class="carousel-caption">
+              <span>$ 14,000,000.00</span>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/images/black_image.PNG" class="img-carousel">
+            </div>
+            <div class="carousel-caption">
+              <span>$ 12,000,000.00</span>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="assets/images/black_image.PNG" class="img-carousel">
+            </div>
+            <div class="carousel-caption">
+              <span>$ 400,000.00</span>
+            </div>
+          </ng-template>
+        </ngb-carousel>
       </div>
     </div>
   </div>
   <br>
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col" *ngFor="let product of productstoShow">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col" *ngFor="let product of productstoShow;index">
     <app-card [product]="product" [showBank]="productsAll"></app-card>
   </div>
 </div>
 <footer>
-  <strong>¿No encuentras lo que estas buscando?</strong>
+  <strong>¿No encuentras lo que estas buscando?</strong><br>
+  <span>Seguimos trabajando para tener todo lo que necesitas en esta nueva experiencia. Mientras tanto, puedes buscar lo
+    que no encuentres en la version anterior</span>
+    <br><br>
+  <button class="btn btn-primary">IR A LA VERSION ANTERIOR</button>
+  <div class="padding4"></div>
+  <h4>¿Quieres otro producto?</h4>
+  <h4> <strong> Adquierelo aqui</strong></h4>
 </footer>

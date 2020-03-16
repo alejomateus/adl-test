@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.menuService.getUsers().subscribe((res: Array<MenuOptions>) => {
+    this.menuService.getMenu().subscribe((res: Array<MenuOptions>) => {
       this.options = res;
     }, (err) => {
       console.log(err);

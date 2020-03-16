@@ -22,4 +22,8 @@ describe('ToolbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should create', () => {
+    component.ngOnInit();
+    expect(component.userData.name).toEqual('Alejandro');
+  });
 });

@@ -16,7 +16,7 @@ export class MenuService {
       })
     };
   }
-  getUsers(): Observable<any> {
+  getMenu(): Observable<any> {
     return this.http.get(`${environment.urlRestAPI}menu`, this.httpOptions);
   }
 }

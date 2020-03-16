@@ -3,21 +3,23 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ToolbarModule } from '@toolbar/toolbar.module';
+import { CardModule } from '@card/card.module';
 
 const routes: Routes = [
-    {
-      path: '',
-      component: DashboardComponent
-    }
-  ];
-  
+  {
+    path: '',
+    component: DashboardComponent
+  }
+];
+
 
 @NgModule({
-    declarations: [DashboardComponent],
-    imports: [
-        CommonModule,
-        ToolbarModule,
-        RouterModule.forChild(routes)
-    ]
+  declarations: [DashboardComponent],
+  imports: [
+    CommonModule,
+    ToolbarModule,
+    CardModule,
+    RouterModule.forChild(routes)
+  ]
 })
 export class DashboardModule { }

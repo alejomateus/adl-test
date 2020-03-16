@@ -1,0 +1,31 @@
+<div class="row content">
+  <div class="col-12 showProducts">
+    <div class="box_gretting boxproducts">
+      <span> Mostrar otros productos
+      </span>
+    </div>
+    <div class="box_gretting boxproducts" >
+      <label class="switch">
+        <input type="checkbox" [checked]="productsAll" (click)="changeProducts()" >
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <div class="col-12 finance">
+    <div class="row">
+      <div class="col-6">
+        <span>¿Cómo se ven tus finanzas?</span>
+      </div>
+      <div class="col-6">
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col" *ngFor="let product of productstoShow">
+    <card [product]="product" [showBank]="productsAll"></card>
+  </div>
+</div>
+<footer>
+  <strong>¿No encuentras lo que estas buscando?</strong>
+</footer>

@@ -16,7 +16,7 @@ export class ProductsService {
       })
     };
   }
-  getUsers(): Observable<any> {
+  getProducts(): Observable<any> {
     return this.http.get(`${environment.urlRestAPI}products`, this.httpOptions);
   }
 }

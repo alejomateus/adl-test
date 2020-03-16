@@ -28,8 +28,14 @@
       "@menu/*": [
         "app/modules/menu/*"
       ],
+      "@dashboard/*": [
+        "app/modules/dashboard/*"
+      ],
       "@toolbar/*": [
         "app/modules/toolbar/*"
+      ],
+      "@card/*": [
+        "app/modules/card/*"
       ],
     }
   },

@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-header">
+        <div class="col-4">
+            <img src="assets/images/icon.PNG" >
+        </div>
+        <div class="col-8">
+            <div class="right" (click)="showProductDetail()">
+                <a href="#" >Ver detalle
+                </a>
+                <img src="assets/images/detail_arrow.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <strong class="card-title">{{product.typeAccount}}</strong>
+        <br>
+        <span class="accountnumber">Nro {{product.id}}</span>
+        <div *ngIf="showBank">
+            <span class="accountnumber">{{product.accountInformation.bank}}</span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="#" class="btn btn-primary">PAGAR</a>
+    </div>
+</div>
